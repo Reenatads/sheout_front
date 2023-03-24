@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset='utf-8'>
+    <title>SHEOUT</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel='stylesheet' type='text/css' media='screen' th:href='@{/css/style.css}'/>
+</head>
+<body>
+<header>
+    <div class="d-flex justify-content-center">
+        <a href="">
+            <img th:src="@{/images/LOGO_SHEOUT.png}" alt="SHEOUT logo"/>
+        </a>
+    </div>
+</header>
+<br/><br/>
+<!-- Header - End -->
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+    <a class="navbar-brand" href="#">SHEOUT</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" >
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">New Arrivals</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Clothing</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Shoes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Accessories</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" >Seller Space</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="email" placeholder="Email">
+                    <input class="form-control mr-sm-2" type="password" placeholder="Password">
+                    <button class="btn btn-dark btn-primary my-2 my-sm-0" type="submit">Log In</button>
+                    <a href="#" class="btn  btn-link text-dark my-2 my-sm-0 ml-3" onclick="location.href='clientHome.html'">Sign Up</a>
+                </form>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span class="badge badge-pill badge-danger">0</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!-- Navbar - End -->
+
+<h1>SHEOUT Modest fashion</h1>
+
+<section class="featured-products">
+    <h2>Featured Products</h2>
+    <div class="row justify-content-center align-items-center">
+        <div class="col-md-4 text-center">
+            <div class="product-card">
+                <img class="product-image" th:src="@{/images/blouse1.png}" alt="Featured product 1" />
+                <h3>Product 1</h3>
+                <p>$50</p>
+                <button class="add-to-cart-button">Add to cart</button>
+            </div>
+        </div>
+        <div class="col-md-4 text-center">
+            <div class="product-card">
+                <img class="product-image" th:src="@{/images/dress1.png}" alt="Featured product 2" />
+                <h3>Product 2</h3>
+                <p>$60</p>
+                <button class="add-to-cart-button">Add to cart</button>
+            </div>
+        </div>
+        <div class="col-md-4 text-center">
+            <div class="product-card">
+                <img class="product-image" th:src="@{/images/blouse3.png}" alt="Featured product 3" />
+                <h3>Product 3</h3>
+                <p>$70</p>
+                <button class="add-to-cart-button">Add to cart</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="social-proof">
+    <h2>Social Proof</h2>
+    <div class="testimonial">
+        <p>"I love SHEOUT! Their clothes are always so unique and stylish."</p>
+        <cite> - Jane Doe</cite>
+    </div>
+    <div class="testimonial">
+        <p>"I've been shopping at SHEOUT for years and they never disappoint."</p>
+        <cite> - Rebecca Smith</cite>
+    </div>
+</section>
+<footer class="bg-dark text-white py-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p>&copy; SHEOUT 2023. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
