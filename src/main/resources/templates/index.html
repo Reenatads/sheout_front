@@ -16,7 +16,8 @@
 </header>
 <br/><br/>
 <!-- Header - End -->
-<nav class="navbar navbar-expand-md navbar-light bg-light">
+<!-- Navbar - Begin -->
+<nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
     <a class="navbar-brand" href="#">SHEOUT</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" >
         <span class="navbar-toggler-icon"></span>
@@ -26,29 +27,14 @@
             <li class="nav-item">
                 <a class="nav-link" href="#">Home</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">New Arrivals</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Clothing</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Shoes</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Accessories</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#" >Seller Space</a>
-            </li>
         </ul>
         <ul class="navbar-nav">
             <li class="nav-item">
                 <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="email" placeholder="Email">
                     <input class="form-control mr-sm-2" type="password" placeholder="Password">
-                    <button class="btn btn-dark btn-primary my-2 my-sm-0" type="submit">Log In</button>
-                    <a href="#" class="btn  btn-link text-dark my-2 my-sm-0 ml-3" onclick="location.href='clientHome.html'">Sign Up</a>
+                    <a href="#" class="btn btn-dark btn-primary my-2 my-sm-0" type="submit" onclick="location.href='clientHome.html'">Log In</a>
+                    <a href="#" class="btn  btn-link text-dark my-2 my-sm-0 ml-3"  onclick="location.href='clientRegister.html'">Sign Up</a>
                 </form>
             </li>
             <li class="nav-item">
@@ -61,41 +47,131 @@
     </div>
 </nav>
 <!-- Navbar - End -->
-
-<h1>SHEOUT Modest fashion</h1>
-
-<section class="featured-products">
-    <h2>Featured Products</h2>
-    <div class="row justify-content-center align-items-center">
-        <div class="col-md-4 text-center">
-            <div class="product-card">
-                <img class="product-image" th:src="@{/images/blouse1.png}" alt="Featured product 1" />
-                <h3>Product 1</h3>
-                <p>$50</p>
-                <button class="add-to-cart-button">Add to cart</button>
+<!-- Container - products -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-header">
+                    Filters
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <h5>Order by price</h5>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="order-price" id="ascending" value="ascending">
+                            <label class="form-check-label" for="ascending">
+                                Ascending
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="order-price" id="descending" value="descending">
+                            <label class="form-check-label" for="descending">
+                                Descending
+                            </label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <h5>Category</h5>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="dress">
+                            <label class="form-check-label" for="dress">
+                                Dress
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="accessories">
+                            <label class="form-check-label" for="accessories">
+                                Accessories
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="blouses">
+                            <label class="form-check-label" for="blouses">
+                                Blouses
+                            </label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <h5>Shipping</h5>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="free-shipping">
+                            <label class="form-check-label" for="free-shipping">
+                                Free shipping
+                            </label>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
-        <div class="col-md-4 text-center">
-            <div class="product-card">
-                <img class="product-image" th:src="@{/images/dress1.png}" alt="Featured product 2" />
-                <h3>Product 2</h3>
-                <p>$60</p>
-                <button class="add-to-cart-button">Add to cart</button>
-            </div>
-        </div>
-        <div class="col-md-4 text-center">
-            <div class="product-card">
-                <img class="product-image" th:src="@{/images/blouse3.png}" alt="Featured product 3" />
-                <h3>Product 3</h3>
-                <p>$70</p>
-                <button class="add-to-cart-button">Add to cart</button>
+        <!-- Products -->
+        <div class="col-md-9">
+            <div class="row align-items">
+                <div class="col-md-4 col-4" style="margin-top: 20px;">
+                    <div class="card">
+                        <img class="card-img-top" th:src="@{/images/blouse1.png}" alt="Product 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Princess flower blouse</h5>
+                            <p class="card-text">$50</p>
+                            <a href="#" class="btn btn-dark btn-primary">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-4" style="margin-top: 20px;">
+                    <div class="card">
+                        <img class="card-img-top" th:src="@{/images/blouse1.png}" alt="Product 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Princess flower blouse</h5>
+                            <p class="card-text">$50</p>
+                            <a href="#" class="btn btn-dark btn-primary">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-4" style="margin-top: 20px;">
+                    <div class="card">
+                        <img class="card-img-top" th:src="@{/images/blouse1.png}" alt="Product 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Black elegant blouse</h5>
+                            <p class="card-text">$50</p>
+                            <a href="#" class="btn btn-dark btn-primary">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-4" style="margin-top: 20px;">
+                    <div class="card">
+                        <img class="card-img-top" th:src="@{/images/blouse1.png}" alt="Product 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Black elegant blouse</h5>
+                            <p class="card-text">$50</p>
+                            <a href="#" class="btn btn-dark btn-primary">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-4" style="margin-top: 20px;">
+                    <div class="card">
+                        <img class="card-img-top" th:src="@{/images/blouse1.png}" alt="Product 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Black elegant blouse</h5>
+                            <p class="card-text">$50</p>
+                            <a href="#" class="btn btn-dark btn-primary">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-4" style="margin-top: 20px;">
+                    <div class="card">
+                        <img class="card-img-top" th:src="@{/images/blouse1.png}" alt="Product 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Black elegant blouse</h5>
+                            <p class="card-text">$50</p>
+                            <a href="#" class="btn btn-dark btn-primary">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</section>
-
-
-
+</div>
+<br/><br/>
 <section class="social-proof">
     <h2>Social Proof</h2>
     <div class="testimonial">

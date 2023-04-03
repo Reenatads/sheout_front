@@ -9,13 +9,13 @@ import ch.qos.logback.core.model.Model;
 @Controller
 public class InfrastructureWeb {
     
-    @GetMapping
+    @GetMapping("/index.html")
     public String index() {
         return "index";
     }
-    @RequestMapping("/clientHome")
-    public String clientHome () {
-        // controller logic
+
+    @GetMapping("/clientHome.html")
+    public String client_Home(){
         return "clientHome";
     }
     @RequestMapping("/adminHome")
@@ -38,18 +38,13 @@ public class InfrastructureWeb {
         // controller logic
         return "clientCart";
     }
-    @RequestMapping("/home")
-    public String hHome (Model model) {
-        // controller logic
-        return "home";
-    }
 
-    @RequestMapping("/clientOrder")
+    @RequestMapping("/clientOrder.html")
     public String clientOrder (Model model) {
         // controller logic
         return "clientOrder";
     }
-    @RequestMapping("/clientRegister")
+    @RequestMapping("/clientRegister.html")
     public String clientRegister (Model model) {
         // controller logic
         return "clientRegister";
@@ -58,32 +53,6 @@ public class InfrastructureWeb {
     public String clientStore (Model model) {
         // controller logic
         return "clientStore";
-    }
-
-    @RequestMapping("/storeHome")
-    public String storeHome (Model model) {
-        // controller logic
-        return "storeHome";
-    }
-    @RequestMapping("/storeOrder")
-    public String storeOrder (Model model) {
-        // controller logic
-        return "storeOrder";
-    }
-    @RequestMapping("/storeRegister")
-    public String storeRegister (Model model) {
-        // controller logic
-        return "storeRegister";
-    }
-    @RequestMapping("/storeReportItems")
-    public String storeReportItems (Model model) {
-        // controller logic
-        return "storeReportItems";
-    }
-    @RequestMapping("/storeReportOrders")
-    public String storeReportOrders (Model model) {
-        // controller logic
-        return "storeReportOrders";
     }
 }
     

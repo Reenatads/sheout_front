@@ -1,62 +1,100 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
     <meta charset='utf-8'>
     <title>SHEOUT</title>
-    <link rel='stylesheet' type='text/css' media='screen' href='../css/main.css'>
-    <script src='../js/...'></script>
-  </head>
-  <body>
-    <header>
-      <div>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel='stylesheet' type='text/css' media='screen' th:href='@{/css/style.css}'/>
+</head>
+<body>
+<header>
+    <div class="d-flex justify-content-center">
         <a href="">
-          <img src="/sheout/html/images/LOGO_SHEOUT.png" />
-         </a>
-      </div>
-    </header>
-    <br><br>
-    <!-- Header - End -->
+            <img th:src="@{/images/LOGO_SHEOUT.png}" alt="SHEOUT logo"/>
+        </a>
+    </div>
+</header>
+<br/><br/>
+<!-- Header - End -->
 
     <div>
         <h1>Client Register</h1>
 
-        <div  class="error-message">
-           Here goes a success message
-        </div><br>
+<!--        <div  class="error-message">-->
+<!--           Here goes a success message-->
+<!--        </div><br>-->
 
-        <form method="post" action="" class="form-style">
-            <fieldset>
-                <label for="name">Name: </label></br>
-                <input type="text" id="name" name="name" placeholder="Name..."/><br><br>
-                <div  class="error-message">
-                    Here goes an error message example
-                </div>
+        <div class="container">
+            <form method="post" action="" class="form-style">
+                <fieldset>
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" class="form-control" placeholder="Name...">
+                        <div class="invalid-feedback">
+                            Please enter your name.
+                        </div>
+                    </div>
 
-                <label for="cpf">CPF: </label></br>
-                <input type="text" id="cpf" name="cpf" placeholder="CPF..."/><br><br>
+                    <div class="form-group">
+                        <label for="cpf">CPF:</label>
+                        <input type="text" id="cpf" name="cpf" class="form-control" placeholder="CPF...">
+                        <div class="invalid-feedback">
+                            Please enter a valid CPF.
+                        </div>
+                    </div>
 
-                <label for="email">E-mail: </label></br>
-                <input type="text" id="email" name="email" placeholder="E-mail..."/><br><br>
-            
-                <label for="phone">Phone number: </label></br>
-                <input type="text" id="phone" name="phone" placeholder="Phone number..."/><br><br>
-            
-                <label for="zipcode">Zip Code: </label></br>
-                <input type="text" id="zipcode" name="zipcode" placeholder="Zip Code..."/><br><br>
-            
-                <label for="password">Password: </label></br>
-                <input type="password" id="password" name="password" placeholder="Password..."/><br><br>
-            
-                <input type="button" value="Register"/>
-                <input type="button" value="Return" class="return-button"/>
-            </fieldset>
-        </form>
-    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="E-mail...">
+                        <div class="invalid-feedback">
+                            Please enter a valid e-mail.
+                        </div>
+                    </div>
 
+                    <div class="form-group">
+                        <label for="phone">Phone number:</label>
+                        <input type="tel" id="phone" name="phone" class="form-control" placeholder="Phone number...">
+                        <div class="invalid-feedback">
+                            Please enter a valid phone number.
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="zipcode">Zip Code:</label>
+                        <input type="text" id="zipcode" name="zipcode" class="form-control" placeholder="Zip Code...">
+                        <div class="invalid-feedback">
+                            Please enter a valid zip code.
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" class="form-control" placeholder="Password...">
+                        <div class="invalid-feedback">
+                            Please enter a password.
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-dark btn-primary">Register</button>
+                    <a href="#" class="btn btn-secondary return-button">Return</a>
+                </fieldset>
+            </form>
+        </div>
 
     <!-- Footer - Begin -->
-  <footer>
-    <p>&copy; SHEOUT 2023. All rights reserved.</p>
-  </footer>
+<br/><br/>
+<footer class="bg-dark text-white py-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p>&copy; SHEOUT 2023. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
